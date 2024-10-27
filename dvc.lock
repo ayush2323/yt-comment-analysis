@@ -1,0 +1,25 @@
+schema: '2.0'
+stages:
+  model_evaluation:
+    cmd: python src/model/model_evaluation.py
+    deps:
+    - path: data/interim/test_processed.csv
+      hash: md5
+      md5: 4f30375397ec89fead1745ee6d70f201
+      size: 1000526
+    - path: data/interim/train_processed.csv
+      hash: md5
+      md5: 35027dfda8274bd9356544f2ff358aa4
+      size: 4134324
+    - path: lgbm_model.pkl
+      hash: md5
+      md5: f9a21f38d38aa1188c584e9a966e1f77
+      size: 4103161
+    - path: src/model/model_evaluation.py
+      hash: md5
+      md5: 0f37cbd88b40c3bd53f40b9c53f9ae08
+      size: 6844
+    - path: tfidf_vectorizer.pkl
+      hash: md5
+      md5: 431953e9ca2220dce4d887db56f7b93a
+      size: 384101
