@@ -1,6 +1,4 @@
 [core]
     remote = myremote
-['remote "myremove"']
-    url = s3://ytcommentdvcmlbucket
 ['remote "myremote"']
     url = s3://ytcommentdvcmlbucket

@@ -21,5 +21,5 @@ stages:
       size: 6844
     - path: tfidf_vectorizer.pkl
       hash: md5
-      md5: cce3caebd0e485e09a3a9a2e916f49ba
+      md5: 8e2fe043ff4ac4e06e4a79a6a62ea0b4
       size: 383935
