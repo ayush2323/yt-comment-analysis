@@ -1,4 +1,4 @@
 [core]
-    remote = myremote
-['remote "myremote"']
-    url = c:\Users\ayush.tiwari\AppData\Local\Temp
+    remote = myremove
+['remote "myremove"']
+    url = s3://ytcommentdvcmlbucket
