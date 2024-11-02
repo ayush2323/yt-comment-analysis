@@ -1,4 +1,4 @@
 [core]
     remote = myremote
 ['remote "myremote"']
-    url = s3://ytcommentdvcmlbucket
+    url = s3://ml-dvc-ec2-bucket
