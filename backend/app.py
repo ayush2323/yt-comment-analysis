@@ -53,7 +53,7 @@ def preprocess_comment(comment):
 # Load the model and vectorizer from the model registry and local storage
 def load_model_and_vectorizer(model_name, model_version, vectorizer_path):
     # Set MLflow tracking URI to your server
-    mlflow.set_tracking_uri("http://ec2-3-12-104-145.us-east-2.compute.amazonaws.com:5000/")
+    mlflow.set_tracking_uri("http://ec2-18-218-20-56.us-east-2.compute.amazonaws.com:5000/")
     client = MlflowClient()
     model_uri = f"models:/{model_name}/{model_version}"
     model = mlflow.pyfunc.load_model(model_uri)
@@ -61,7 +61,7 @@ def load_model_and_vectorizer(model_name, model_version, vectorizer_path):
     return model, vectorizer
 
 # Initialize the model and vectorizer
-model, vectorizer = load_model_and_vectorizer("yt_chrome_plugin_model", "2", "./tfidf_vectorizer.pkl")  # Update paths and versions as needed
+model, vectorizer = load_model_and_vectorizer("yt_chrome_plugin_model", "4", "./tfidf_vectorizer.pkl")  # Update paths and versions as needed
 
 @app.route('/predict_with_timestamps', methods=['POST'])
 def predict_with_timestamps():
@@ -149,7 +149,7 @@ def generate_chart():
             colors=colors,
             autopct='%1.1f%%',
             startangle=140,
-            textprops={'color': 'w'}
+            textprops={'color': 'b'}
         )
         plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
