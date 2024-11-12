@@ -93,6 +93,11 @@ def predict_with_timestamps():
     response = [{"comment": comment, "sentiment": sentiment, "timestamp": timestamp} for comment, sentiment, timestamp in zip(comments, predictions, timestamps)]
     return jsonify(response)
 
+
+@app.route('/')
+def home():
+    return "Welcome to the flask api"
+
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.json
